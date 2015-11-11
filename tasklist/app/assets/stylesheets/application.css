@@ -1,15 +1,49 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import url('https://fonts.googleapis.com/css?family=Lato|News+Gothic|Inconsolata|Droid+Sans|Raleway|Leckerli+One');
+
+body {
+  text-align: center;
+  background-color: #FFF;
+  font-family: Raleway, sans-serif;
+  width: 100%;
+  margin: auto;
+  font-size: 23px;
+  background-image: url("paper.png");
+}
+
+h1, h2 {
+  font-size: 3em;
+  font-family: 'Leckerli One';
+  color: #F38630;
+  padding-top: 100px; 
+}
+
+a:link {color: #FA6900}
+a:visited {color: #FA6900}
+
+.tasks {
+  font-weight: bold;
+}
+
+.main-nav {
+  background: rgba(181, 218, 219, .5);
+  color: #FA6900;
+  position: fixed;
+  top: 0;
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
+  height: 50px;
+  width: 100%;
+  text-align:center;
+  font-size: 1.1em;
+}
+
+footer {
+  font-size: 18px;
+  background: rgba(181, 218, 219, .5);
+  color: #FA6900;
+  position: fixed;
+  bottom: 0;
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
+  width: 100%;
+}

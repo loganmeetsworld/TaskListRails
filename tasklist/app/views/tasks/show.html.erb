@@ -1,0 +1,9 @@
+<h2>Task: <%= @task.name %></h2>
+<h3>Description: <%= @task.description %></h3>
+<p>
+<% if !@task.complete_date.nil? %>
+	Completed on: <%= @task.complete_date %>
+<% else %>
+	Not yet completed.
+<% end %>
+</p>

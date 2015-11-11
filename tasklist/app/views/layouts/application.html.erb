@@ -7,8 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<header>
+		<nav class="main-nav">
+			<a href="/">Your List</a> | <a href="add">Add a Task</a>
+		</nav>
+	</header>
 
 <%= yield %>
 
+	<footer>
+		Webpage by <a href="https://github.com/loganmeetsworld">Logan McDonald.</a><br>
+		Copyright &copy; <%= Time.now.year %> All rights reserved.
+	</footer>
 </body>
 </html>
