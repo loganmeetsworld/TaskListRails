@@ -2,23 +2,34 @@
 
 body {
   text-align: center;
-  background-color: #FFF;
+  background: rgba(255, 255, 255, .5);
   font-family: Raleway, sans-serif;
   width: 100%;
   margin: auto;
   font-size: 23px;
-  background-image: url("paper.png");
+}
+
+body::after {
+  content: "";
+  background: url("paper.png");
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
 }
 
 h1, h2 {
-  font-size: 3em;
+  font-size: 2.8em;
   font-family: 'Leckerli One';
   color: #F38630;
   padding-top: 100px; 
 }
 
 a:link {color: #FA6900}
-a:visited {color: #FA6900}
+a:visited {color: #F38630}
 
 .tasks {
   font-weight: bold;
