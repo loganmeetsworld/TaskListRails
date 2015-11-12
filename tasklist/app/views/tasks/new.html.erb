@@ -1,0 +1,15 @@
+<h2>Add a new task!</h2>
+<div class="create_form">
+	<%= form_for @task, method: @task.id do |f| %> 
+
+		<%= f.label :name %> 
+		<% name_placeholder = "Name your task here!" %> <br>
+		<%= f.text_field :name, required: true, size: "50", placeholder: name_placeholder, value: @task.name ? name: "" %> 
+		<br><br>
+		<%= f.label :description %> <br>
+		<% descr_placeholder = "Describe your task here!" %> 
+		<%= f.text_area :description, size: "60x8", placeholder: descr_placeholder, value: @task.description ? description : "" %>
+		<br><br>
+		<%= f.submit "Add Task" %> 
+	<% end %> 
+</div>

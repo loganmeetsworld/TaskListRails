@@ -7,6 +7,7 @@ body {
   width: 100%;
   margin: auto;
   font-size: 23px;
+  height: 100%;
 }
 
 body::after {
@@ -21,11 +22,28 @@ body::after {
   z-index: -1;   
 }
 
-h1, h2 {
-  font-size: 2.8em;
+table {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+h1 {
+  font-size: 2.5em;
   font-family: 'Leckerli One';
   color: #F38630;
-  padding-top: 100px; 
+  padding-top: 20px; 
+}
+
+h2 {
+  font-size: 2em;
+  font-family: 'Leckerli One';
+  color: #F38630;
+  padding-top: 50px; 
+}
+
+.create_form {
+  position: relative;
 }
 
 a:link {color: #FA6900}
@@ -40,21 +58,35 @@ a:visited {color: #F38630}
   color: #FA6900;
   position: fixed;
   top: 0;
-  padding-top: 1.2em;
-  padding-bottom: 1.2em;
   height: 50px;
   width: 100%;
   text-align:center;
-  font-size: 1.1em;
+  font-size: 22px;
+}
+
+input[type=submit] {
+  background: #F38630;
+  border-color: #FA6900;
+  color: #FFF;
+  border-radius: 10%;
+  font-size: .7em;
+}
+
+input[type=text], select, textarea {
+  border: none;
+  outline: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  padding: 7px;
 }
 
 footer {
   font-size: 18px;
   background: rgba(181, 218, 219, .5);
   color: #FA6900;
-  position: fixed;
-  bottom: 0;
-  padding-top: 1.2em;
-  padding-bottom: 1.2em;
-  width: 100%;
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:50px;
+  width:100%;
 }
