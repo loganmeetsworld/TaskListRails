@@ -1,0 +1,26 @@
+<div class="create_form">
+	<%= form_for @task do |f| %> 
+
+		<%= f.label :name %><br>
+		<%= f.text_field :name, required: true, size: "50", placeholder: "Name your task here!"%> 
+		
+		<br><br>
+		
+		<%= f.label :complete_date %> <br>
+		<%= f.date_field :complete_date %>
+		
+		<br><br>
+		
+		<%= f.label :description %> <br>
+		<%= f.text_area :description, size: "60x8", placeholder: "Describe your task here (optional)!"%>
+		
+		<br><br>
+
+		<% if !@task.id.nil? %>
+			<input id="special-button" type="submit" value="Update Task"></form>
+
+		<% else %> 
+			<input id="special-button" type="submit" value="Add Task"></form>
+		<% end %>
+	<% end %> 
+</div>

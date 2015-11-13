@@ -6,7 +6,7 @@ body {
   font-family: Raleway, sans-serif;
   width: 100%;
   margin: auto;
-  font-size: 23px;
+  font-size: 20px;
   height: 100%;
 }
 
@@ -26,28 +26,34 @@ table {
   display: flex; 
   justify-content: center; 
   align-items: center; 
+  padding-bottom: 20px;
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 50px;
   font-family: 'Leckerli One';
   color: #F38630;
-  padding-top: 20px; 
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 40px;
   font-family: 'Leckerli One';
   color: #F38630;
-  padding-top: 50px; 
 }
 
 .create_form {
   position: relative;
+  padding-bottom: 30px;
 }
 
-a:link {color: #FA6900}
-a:visited {color: #F38630}
+
+a {
+  text-decoration: none;
+}
+
+a:link {color: #000}
+a:visited {color: #000}
+a:hover {color: #F38630}
 
 .tasks {
   font-weight: bold;
@@ -55,24 +61,33 @@ a:visited {color: #F38630}
 
 .main-nav {
   background: rgba(181, 218, 219, .5);
-  color: #FA6900;
-  position: fixed;
+  color: #000;
+  position: relative;
   top: 0;
-  height: 50px;
+  height: 40px;
   width: 100%;
   text-align:center;
   font-size: 22px;
+  padding-top: 10px;
 }
 
 input[type=submit] {
-  background: #F38630;
-  border-color: #FA6900;
-  color: #FFF;
-  border-radius: 10%;
-  font-size: .7em;
+  font-family: 'Droid+Sans', 'Lato', sans-serif;
+  color: none;
+  font-size: 15px;
+  background: none;
+  border: none;
 }
 
-input[type=text], select, textarea {
+input[type=submit]:hover {
+  font-family: 'Droid+Sans', 'Lato', sans-serif;
+  background: none;
+  border: none;
+  font-size: 15px;
+  color: #F38630;
+}
+
+input[type=text], input[type=date], select, textarea {
   border: none;
   outline: none;
   font-family: 'Lato', sans-serif;
@@ -80,13 +95,48 @@ input[type=text], select, textarea {
   padding: 7px;
 }
 
+#special-button {
+  background: #F38630;
+  border-color: #FA6900;
+  color: #FFF;
+  border-radius: 10%;
+  font-size: 18px;
+}
+
+th {
+  text-decoration: underline;
+  padding-bottom: 15px;
+}
+
+.update {
+  padding: 0px;
+}
+
+.status {
+  padding: 0 10px 0 0;
+}
+
+td {
+  padding:0 20px 0 20px;
+}
+
+#checkbox {
+  font-size: 25px;
+}
+
+
+.complete {
+  text-decoration: line-through;
+}
+
 footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
   font-size: 18px;
   background: rgba(181, 218, 219, .5);
-  color: #FA6900;
-  position:fixed;
-  left:0px;
-  bottom:0px;
-  height:50px;
-  width:100%;
+  color: #000;
 }

@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
 	def index
 		@tasks = Task.all
+		@tasks = @tasks.order(:complete_date, :name)
 	end
 
 	def show
@@ -17,13 +18,40 @@ class TasksController < ApplicationController
 		redirect_to "/"
 	end
 
-	# def edit
-	# 	@task = Task.find(params[:id])
-	# 	render :new
-	# end
-
 	def create
 		Task.create(task_params[:task])
+		redirect_to "/"
+	end
+
+	def edit 
+		show
+	end
+
+	def update
+		show
+
+		@task.update(name: params[:task][:name],
+								description: params[:task][:description],
+								complete_date: params[:task][:complete_date])
+		@task.save
+
+		redirect_to "/"
+	end
+
+	def complete
+		show
+
+		@task.complete_date = Time.now
+		@task.save
+
+		redirect_to "/"
+	end
+
+	def incomplete
+		show
+		@task.complete_date = nil
+		@task.save
+
 		redirect_to "/"
 	end
 
