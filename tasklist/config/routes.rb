@@ -13,8 +13,7 @@ Rails.application.routes.draw do
 	delete 'tasks/:id' => 'tasks#delete'
 
 	# Edit
-	get 'tasks/update/:id' => 'tasks#edit'
-	post 'tasks/:id/edit' => 'tasks#update'
+	get 'tasks/:id/edit' => 'tasks#edit'
 	patch 'tasks/:id' => 'tasks#update'
 
 	# Update to complete
