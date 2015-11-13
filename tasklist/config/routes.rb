@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
+	# Home page
 	root 'tasks#index'
+
+	# Add a task
 	get 'tasks/new' => 'tasks#new' # Method and the data
 	post 'tasks' => 'tasks#create' # Just the action
 
+	# Show individual page
 	get 'tasks/:id' => 'tasks#show', as: :task
+
+	# Delete
 	delete 'tasks/:id' => 'tasks#delete'
 
 	# Edit
