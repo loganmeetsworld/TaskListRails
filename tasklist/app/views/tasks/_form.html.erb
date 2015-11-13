@@ -1,7 +1,6 @@
-<div class="create_form">
+<a class="create_form">
 	<%= form_for @task do |f| %> 
-
-		<%= f.label :name %><br>
+		<%= f.label :name %> <br>
 		<%= f.text_field :name, required: true, size: "50", placeholder: "Name your task here!"%> 
 		
 		<br><br>
@@ -16,10 +15,7 @@
 		
 		<br><br>
 
-		<% if !@task.id.nil? %>
-			<%= f.submit value: "Update Task", id: 'special-button'%>
-		<% else %> 
-			<%= f.submit value: "Add Task", id: 'special-button'%>
+		<%= !@task.id.nil? ? (f.submit value: "Update Task", id: 'special-button') : (f.submit value: "Add Task", id: 'special-button') %>
+		
 		<% end %>
-	<% end %> 
-</div>
+</a>
