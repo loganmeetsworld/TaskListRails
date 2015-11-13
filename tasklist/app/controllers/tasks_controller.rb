@@ -30,10 +30,7 @@ class TasksController < ApplicationController
 	def update
 		show
 
-		@task.update(
-			name: params[:task][:name],
-			description: params[:task][:description],
-			complete_date: params[:task][:complete_date])
+		@task.update(task_params[:task])
 
 		redirect_to "/"
 	end
