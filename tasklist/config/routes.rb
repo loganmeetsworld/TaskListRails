@@ -11,7 +11,6 @@ Rails.application.routes.draw do
 	post 'tasks/:id/edit' => 'tasks#update'
 	patch 'tasks/:id' => 'tasks#update'
 
-
 	# Update to complete
 	get 'tasks/complete/:id' => 'tasks#complete'
 	patch 'tasks/complete/:id' => 'tasks#complete'

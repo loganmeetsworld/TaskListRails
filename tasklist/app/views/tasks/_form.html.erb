@@ -17,10 +17,9 @@
 		<br><br>
 
 		<% if !@task.id.nil? %>
-			<input id="special-button" type="submit" value="Update Task"></form>
-
+			<%= f.submit value: "Update Task", id: 'special-button'%>
 		<% else %> 
-			<input id="special-button" type="submit" value="Add Task"></form>
+			<%= f.submit value: "Add Task", id: 'special-button'%>
 		<% end %>
 	<% end %> 
 </div>
