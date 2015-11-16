@@ -4,17 +4,21 @@ class PeopleController < ApplicationController
 		@people = @people.order(:name)
 	end
 
-	def show
+	def find_person
 		@person = Person.find(params[:id])
 	end
 
+	def show
+		find_person
+	end
+
 	def tasks
-		show
+		find_person
 	end
 
 	private
 
-	def task_params
+	def people_params
 		params.permit(person:[:name, :bio])
 	end
 end

@@ -17,11 +17,9 @@ Rails.application.routes.draw do
 	patch 'tasks/:id' => 'tasks#update'
 
 	# Update to complete
-	get 'tasks/complete/:id' => 'tasks#complete'
 	patch 'tasks/complete/:id' => 'tasks#complete'
 
 	# Update to incomplete
-	get 'tasks/incomplete/:id' => 'tasks#incomplete'
 	patch 'tasks/incomplete/:id' => 'tasks#incomplete'
 
 	# People routes

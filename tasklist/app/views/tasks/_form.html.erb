@@ -1,4 +1,4 @@
-<a class="create_form">
+<div class="create_form">
 	<%= form_for @task do |f| %> 
 		<%= f.label :person_id, "Task Owner" %> <br>
 		<%= f.collection_select :person_id, Person.order(:name), :id, :name, include_blank: true %>
@@ -23,4 +23,4 @@
 		<%= !@task.id.nil? ? (f.submit value: "Update Task", id: 'special-button') : (f.submit value: "Add Task", id: 'special-button') %>
 		
 		<% end %>
-</a>
+</div>

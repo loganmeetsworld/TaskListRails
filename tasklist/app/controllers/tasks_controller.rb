@@ -1,7 +1,6 @@
 class TasksController < ApplicationController
 	def index
-		@tasks = Task.all
-		@tasks = @tasks.order(:complete_date, :name)
+		@tasks = Task.all.order(:complete_date, :name)
 	end
 
 	def find_task
@@ -9,7 +8,7 @@ class TasksController < ApplicationController
 	end
 
 	def show
-		@task = Task.find(params[:id])
+		find_task
 	end
 
 	def new 
@@ -28,11 +27,11 @@ class TasksController < ApplicationController
 	end
 
 	def edit 
-		before_action :find_task
+		find_task
 	end
 
 	def update
-		before_action :find_task
+		find_task
 
 		@task.update(task_params[:task])
 
@@ -40,7 +39,7 @@ class TasksController < ApplicationController
 	end
 
 	def complete
-		before_action :find_task
+		find_task
 
 		@task.complete_date = Time.now
 		@task.save
@@ -49,7 +48,7 @@ class TasksController < ApplicationController
 	end
 
 	def incomplete
-		before_action :find_task
+		find_task
 		@task.complete_date = nil
 		@task.save
 
