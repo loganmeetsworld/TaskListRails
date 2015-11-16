@@ -1,6 +1,6 @@
 <h1>Task List</h1>
 <table>
-	<th colspan="2">Completed?</th><th>Task Name</th><th colspan="2">Update!</th>
+	<th colspan="2">Completed?</th><th>Task Name</th><th>Owner</th><th colspan="2">Update!</th>
 	<% @tasks.each do |task| %>
 	  <tr>
     	<% if task.complete_date.nil? %>
@@ -19,6 +19,12 @@
 	    	<td class="name"><div class="complete"><%= link_to "#{task.name}", "/tasks/#{task.id}" %></div></td>
 	    <% else %> 
 	    	<td class="name"><%= link_to "#{task.name}", "/tasks/#{task.id}" %></td>
+	    <% end %>
+
+			<% if !task.person.nil? %>
+	    	<td class="owner"><%= link_to "#{task.person.name}", "/people/#{task.person.id}" %></td>
+	    <% else %>
+	    	<td>N/A</td>
 	    <% end %>
 
 	    <td class="update"><%= button_to "Edit", "/tasks/#{task.id}/edit", method: "get" %></td></th>

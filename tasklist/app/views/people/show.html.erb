@@ -1,0 +1,3 @@
+<h2>Owner: <%= @person.name %></h2>
+<p>Bio: <%= @person.name %> <%= @person.bio.downcase %>.</p>
+<h3>Go to: <%= link_to "Complete List of Tasks", "/people/#{@person.id}/tasks", method: "get" %></h3>

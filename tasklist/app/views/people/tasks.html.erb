@@ -1,0 +1,12 @@
+<h2><%= @person.name %>'s Tasks:</h2>
+
+<% @person.tasks.each do |task| %>
+	<li>
+		<%= task.name %> 
+		<% if !task.complete_date.nil? %> 
+			(Completed <%= distance_of_time_in_words(task.complete_date, Time.now) %> ago)
+		<% else %> 
+			(Incomplete)
+		<% end %>
+	</li>
+<% end %> 

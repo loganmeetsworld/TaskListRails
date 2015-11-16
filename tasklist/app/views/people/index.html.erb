@@ -1,0 +1,21 @@
+<h1>People List</h1>
+<table>
+	<th>Name</th><th># Complete Tasks</th>
+	<% @people.each do |person| %> 
+		<tr>
+			<td>
+				<%= link_to "#{person.name}", "/people/#{person.id}" %>
+			</td>
+			<td>
+				<% complete_count = 0 %> 
+				<% person.tasks.each do |task| %>
+					<% if !task.complete_date.nil? %> 
+						<% complete_count += 1 %> 
+					<% end %> 
+				<% end %> 
+				<%= complete_count %>
+			</td>
+			
+		</tr>
+	<% end %> 
+</table>

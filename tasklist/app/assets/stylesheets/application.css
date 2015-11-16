@@ -50,6 +50,8 @@ a {
   text-decoration: none;
 }
 
+form:hover {color: black} 
+
 a:link {color: #000}
 a:visited {color: #000}
 a:hover {color: #F38630}
@@ -133,7 +135,7 @@ footer {
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 1rem;
+  padding: .8rem;
   text-align: center;
   font-size: 18px;
   background: rgba(181, 218, 219, .5);

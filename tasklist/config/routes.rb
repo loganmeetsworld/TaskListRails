@@ -23,4 +23,9 @@ Rails.application.routes.draw do
 	# Update to incomplete
 	get 'tasks/incomplete/:id' => 'tasks#incomplete'
 	patch 'tasks/incomplete/:id' => 'tasks#incomplete'
+
+	# People routes
+	get 'people' => 'people#index'
+	get 'people/:id' => 'people#show'
+  get 'people/:id/tasks' => 'people#tasks'
 end
