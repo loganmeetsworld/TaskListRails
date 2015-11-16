@@ -1,0 +1,16 @@
+<div class="create_form">
+	<%= form_for @person do |f| %> 
+		<%= f.label :name %> <br>
+		<%= f.text_field :name, required: true, size: "60", placeholder: "Name your task here!"%> 
+
+		<br><br>
+		
+		<%= f.label :bio %> <br>
+		<%= f.text_area :bio, size: "60x5", placeholder: "Describe your new person here (optional)!"%>
+		
+		<br><br>
+
+		<%= !@person.id.nil? ? (f.submit value: "Update Person", id: 'special-button') : (f.submit value: "Add Person", id: 'special-button') %>
+		
+		<% end %>
+</div>

@@ -1,7 +1,6 @@
 class PeopleController < ApplicationController
 	def index
-		@people = Person.all
-		@people = @people.order(:name)
+		@people = Person.all.order(:name)
 	end
 
 	def find_person
@@ -12,13 +11,38 @@ class PeopleController < ApplicationController
 		find_person
 	end
 
+	def new
+		@person = Person.new
+	end
+
+	def delete
+		@person = Person.destroy(params[:id])
+		redirect_to "/people"
+	end
+
+	def create
+		Person.create(person_params[:person])
+		redirect_to "/people"
+	end
+
+	def edit
+		find_person
+	end
+
+	def update
+		find_person
+
+		@person.update(person_params[:person])
+		redirect_to "/people"
+	end
+
 	def tasks
 		find_person
 	end
 
 	private
 
-	def people_params
+	def person_params
 		params.permit(person:[:name, :bio])
 	end
 end
