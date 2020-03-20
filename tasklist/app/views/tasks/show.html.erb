@@ -1,0 +1,16 @@
+<h2>Task: <%= @task.name %></h2>
+<h3>Description: <%= @task.description %></h3>
+<p>
+	<% if !@task.complete_date.nil? %>
+		Completed on: <%= @task.complete_date %>
+	<% else %>
+		Not completed.
+	<% end %>
+</p>
+<h3>Project Owner:</h3>
+<p>
+	Name: <%= @task.person.name %>, Bio: <%= @task.person.bio %>
+</p>
+
+<%= button_to "Edit", "/tasks/#{@task.id}/edit", method: "get", id: "special-button" %><br>
+<%= button_to "Delete", "/tasks/#{@task.id}", method: "delete", id: "special-button", data: { :confirm => "Are you sureeeeeeeee you want to delete this task?" } %>

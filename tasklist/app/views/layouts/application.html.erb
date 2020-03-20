@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tasklist</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<header>
+		<nav class="main-nav">
+			<a href="/">All Tasks</a> | <a href="/tasks/new">Add a Task</a> | <a href="/people">People</a> | <a href="/people/new">Add a Person</a>
+		</nav>
+	</header>
+
+	<%= yield %>
+
+	<footer>
+		Webpage by <a href="https://github.com/loganmeetsworld">Logan McDonald.</a><br>
+		Copyright &copy; <%= Time.now.year %> All rights reserved.
+	</footer>
+</body>
+</html>

@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|News+Gothic|Inconsolata|Droid+Sans|Raleway|Leckerli+One');
+
+body {
+  text-align: center;
+  background: rgba(255, 255, 255, .5);
+  font-family: Raleway, sans-serif;
+  width: 100%;
+  margin: auto;
+  font-size: 20px;
+  height: 100%;
+}
+
+body::after {
+  content: "";
+  background: url("paper.png");
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+table {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  padding-bottom: 20px;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: 'Leckerli One';
+  color: #F38630;
+}
+
+h2 {
+  font-size: 40px;
+  font-family: 'Leckerli One';
+  color: #F38630;
+}
+
+.create_form {
+  position: relative;
+  padding-bottom: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+form:hover {color: black} 
+
+a:link {color: #000}
+a:visited {color: #000}
+a:hover {color: #F38630}
+
+.tasks {
+  font-weight: bold;
+}
+
+.main-nav {
+  background: rgba(181, 218, 219, .5);
+  color: #F38630;
+  position: relative;
+  top: 0;
+  height: 40px;
+  width: 100%;
+  text-align:center;
+  font-size: 22px;
+  padding-top: 10px;
+}
+
+input[type=submit] {
+  font-family: 'Droid+Sans', 'Lato', sans-serif;
+  color: none;
+  font-size: 15px;
+  background: none;
+  border: none;
+}
+
+input[type=submit]:hover {
+  font-family: 'Droid+Sans', 'Lato', sans-serif;
+  background: none;
+  border: none;
+  font-size: 15px;
+  color: #F38630;
+}
+
+input[type=text], input[type=date], select, textarea {
+  border: none;
+  outline: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  padding: 7px;
+}
+
+#special-button {
+  background: #F38630;
+  border-color: #FA6900;
+  color: #FFF;
+  border-radius: 10%;
+  font-size: 18px;
+}
+
+th {
+  text-decoration: underline;
+  padding-bottom: 15px;
+}
+
+.update {
+  padding: 0px;
+}
+
+.status {
+  padding: 0 10px 0 0;
+}
+
+td {
+  padding:0 20px 0 20px;
+}
+
+#checkbox {
+  font-size: 25px;
+}
+
+
+.complete {
+  text-decoration: line-through;
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: .8rem;
+  text-align: center;
+  font-size: 18px;
+  background: rgba(181, 218, 219, .5);
+  color: #000;
+}
